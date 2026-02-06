@@ -176,6 +176,18 @@ input::placeholder {
   color: var(--purple-color);
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  background-color: transparent !important;
+  -webkit-text-fill-color: #fff !important; /* text color */
+  caret-color: #fff;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
 @media (max-width: 767.98px) {
   .formBoxCover {
     grid-template-columns: 1fr;

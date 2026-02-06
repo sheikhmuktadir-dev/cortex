@@ -98,7 +98,6 @@ export default function Signup() {
                 <input
                   type="text"
                   className={Style.formField}
-                  autoComplete="off"
                   placeholder="User Name"
                   {...register("username", {
                     required: "Username is required",
@@ -128,7 +127,6 @@ export default function Signup() {
                 <input
                   type="text"
                   className={Style.formField}
-                  autoComplete="off"
                   placeholder="Email Address"
                   {...register("email", {
                     required: "Email is required",

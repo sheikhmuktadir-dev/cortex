@@ -106,7 +106,6 @@ export default function Login() {
               <div className={Style.formBox}>
                 <input
                   type="text"
-                  autoComplete="off"
                   className={Style.formField}
                   placeholder="Email Address"
                   {...register("email", {
@@ -127,7 +126,6 @@ export default function Login() {
                 <div className={Style.formPasswordField}>
                   <input
                     type={inputType}
-                    autoComplete="off"
                     className={Style.formField}
                     placeholder="Password"
                     {...register("password", {
