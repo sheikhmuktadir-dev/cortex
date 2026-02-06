@@ -1,0 +1,34 @@
+.layoutContent {
+  position: relative;
+  margin-left: var(--layout-width-gap);
+  width: calc(100% - var(--layout-width-gap));
+  transition: all 0.3s ease;
+  min-width: 0;
+}
+
+.layoutCollapse {
+  margin-left: var(--layout-collapse-width-gap);
+  width: calc(100% - var(--layout-collapse-width-gap));
+}
+
+.pageContent {
+  padding: var(--layout-space);
+  max-width: 100%;
+  width: 100%;
+  min-height: 100vh;
+  min-width: 0;
+  transition: all 0.3s ease;
+  overflow-x: hidden;
+}
+
+@media (max-width: 767.98px) {
+  .layoutContent {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .layoutCollapse {
+    margin-left: 0;
+    width: 100%;
+  }
+}

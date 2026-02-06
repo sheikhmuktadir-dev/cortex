@@ -1,0 +1,80 @@
+.dashCard {
+  position: relative;
+  border-radius: 8px;
+  box-shadow: inset 0px 0px 90px 0px rgba(0, 0, 0, 0.18);
+  background: var(--gray-background);
+  display: flex;
+  max-width: 100%;
+  transition: all 0.3s ease;
+  width: 100%;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.dashCardImageArea {
+  position: relative;
+  background: #1d1f23;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px 0 0 8px;
+}
+
+.dashCardTextArea {
+  position: relative;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashCardTextCount {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--white-color);
+}
+
+.dashCardTextPara {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1023.98px) {
+  .dashCard {
+    flex-direction: column;
+  }
+
+  .dashCardImageArea {
+    width: 100%;
+  }
+
+  .dashCardTextArea {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .dashCardTextCount {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1599.98px) {
+  .dashCard {
+    flex-direction: column;
+  }
+
+  .dashCardImageArea {
+    width: 100%;
+  }
+
+  .dashCardTextArea {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .dashCardTextCount {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,12 @@
+.chartMain {
+  position: relative;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 1023.98px) {
+  .chartMain {
+    grid-template-columns: 1fr;
+  }
+}

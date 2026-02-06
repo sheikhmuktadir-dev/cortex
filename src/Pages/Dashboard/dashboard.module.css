@@ -1,0 +1,65 @@
+.dashboardMain {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+/* TOP CARDS */
+.dashboardTopGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+
+/* CHART GRIDS */
+.dashboardGraphTopGrid,
+.dashboardGraphBottomGrid {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+}
+
+.dashboardGraphTopGrid {
+  grid-template-columns: 1fr 2fr;
+}
+
+.dashboardGraphBottomGrid {
+  grid-template-columns: 2fr 2fr;
+}
+
+.dashboardGraphTopGrid > *,
+.dashboardGraphBottomGrid > * {
+  min-width: 0;
+}
+
+/* MOBILE */
+@media (max-width: 1023.98px) {
+  .dashboardMain {
+    flex-direction: column;
+    align-items: normal;
+  }
+
+  .dashboardTopGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardMainRight {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .dashboardGraphTopGrid,
+  .dashboardGraphBottomGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboardTopGrid {
+    flex-direction: column;
+  }
+}

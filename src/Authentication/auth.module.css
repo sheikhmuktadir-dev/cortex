@@ -1,0 +1,214 @@
+.formArea {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formBoxCover {
+  position: relative;
+  max-width: var(--auth-form-width);
+  width: 100%;
+  gap: 20px;
+  border-radius: var(--auth-form-radius);
+  display: grid;
+  align-items: center;
+  padding: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: var(--auth-form-shadow);
+  background: var(--auth-form-background);
+  height: auto;
+}
+
+.formImageArea {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  max-height: 700px;
+  height: 100%;
+  perspective: 1200px;
+  border-radius: var(--auth-form-radius);
+}
+
+.formImage {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  border-radius: var(--auth-form-radius);
+  height: 100%;
+  object-fit: cover;
+  transform: rotateY(20deg) rotateX(5deg);
+  transform-style: preserve-3d;
+  transition:
+    transform 0.6s ease,
+    box-shadow 0.6s ease;
+}
+
+.formBoxCover:hover .formImage {
+  transform: rotateY(-0deg) rotateX(0deg) scale(1);
+}
+
+.formLogo {
+  position: absolute;
+  z-index: 50;
+  top: 50%;
+  left: 50%;
+  font-weight: 500;
+  color: var(--white-color);
+  font-size: 4rem;
+  font-family: var(--secondary-font);
+  transform: translate(-50%, -50%) translateZ(60px);
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition:
+    transform 0.6s ease,
+    text-shadow 0.6s ease,
+    letter-spacing 0.6s ease;
+}
+
+.formMain {
+  position: relative;
+  padding: 40px;
+  z-index: 20;
+}
+
+.formHeadingArea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formTitle {
+  position: relative;
+  font-size: 45px;
+  line-height: 1em;
+  font-family: var(--secondary-font);
+  color: var(--white-color);
+  font-weight: 500;
+}
+
+.formPara {
+  position: relative;
+  font-size: 1rem;
+  font-family: var(--secondary-font);
+  display: flex;
+  align-items: center;
+  line-height: 1em;
+  gap: 10px;
+}
+
+.formLink {
+  position: relative;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--blue-color);
+}
+
+.formfieldArea {
+  position: relative;
+  padding: 60px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formBox {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formField {
+  position: relative;
+  height: var(--btn-height);
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--black-border);
+  width: 100%;
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+  color: var(--white-color);
+  font-family: var(--secondary-font);
+  flex: none;
+}
+
+.formField:focus {
+  outline: none;
+  border-bottom: 1px solid var(--purple-border);
+}
+
+.formPasswordField {
+  position: relative;
+}
+
+.eyeBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  cursor: pointer;
+  color: var(--white-color);
+  right: 15px;
+  background: transparent;
+  font-size: 1.5rem;
+}
+
+.formBtnArea {
+  position: relative;
+  padding: 20px 0 0;
+}
+
+input::placeholder {
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+}
+
+.errorMsg {
+  position: relative;
+  font-family: var(--secondary-font);
+  color: var(--purple-color);
+}
+
+@media (max-width: 767.98px) {
+  .formBoxCover {
+    grid-template-columns: 1fr;
+  }
+
+  .formImageArea {
+    max-height: 200px;
+  }
+
+  .formLogo {
+    font-size: 2.5rem;
+  }
+
+  .formTitle {
+    font-size: 2rem;
+  }
+
+  .formMain {
+    padding: 20px;
+  }
+
+  .formfieldArea {
+    padding: 30px 0 0;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .formBoxCover {
+    grid-template-columns: 1fr;
+  }
+
+  .formImageArea {
+    max-height: 400px;
+  }
+}

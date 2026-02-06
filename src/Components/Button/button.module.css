@@ -1,0 +1,70 @@
+.authBtn {
+  position: relative;
+  height: var(--btn-height);
+  background: var(--purple-background);
+  color: var(--white-color);
+  border-radius: var(--btn-radius);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  flex: none;
+  font-weight: 500;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.authBtn:hover {
+  background: var(--pink-background);
+}
+
+.authBtnLoader {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid var(--white-color);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logoutBtn {
+  position: relative;
+  line-height: 1;
+  background: transparent;
+  font-weight: 500;
+  color: var(--blue-color);
+  flex: none;
+  padding: 0;
+}
+
+.logoutBtnLoader {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid var(--black-background);
+  border-radius: 50%;
+  justify-self: center;
+  animation: load 0.8s linear infinite;
+}
+
+.logoutBtnLoaderFlex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@keyframes load {
+  to {
+    transform: rotate(360deg);
+  }
+}

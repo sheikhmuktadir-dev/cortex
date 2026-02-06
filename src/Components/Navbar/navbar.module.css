@@ -1,0 +1,130 @@
+.navBar {
+  height: var(--navbar-height);
+  position: fixed;
+  width: calc(100% - var(--navbar-width-gap));
+  margin-left: var(--navbar-width-gap);
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  background: var(--navbar-background);
+  transition: all 0.3s ease;
+}
+
+.navBarCollapse {
+  margin-left: var(--navbar-collapse-width-gap);
+  width: calc(100% - var(--navbar-collapse-width-gap));
+}
+
+.navToggle {
+  background: transparent;
+  position: relative;
+  padding: 0;
+}
+
+.navToggleImage {
+  position: relative;
+  max-width: 40px;
+  width: 100%;
+  position: relative;
+  object-fit: contain;
+}
+
+.profileArea {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.profileFlex {
+  display: flex;
+  gap: 15px;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+}
+
+.profileImage {
+  position: relative;
+  width: var(--navbar-image-width);
+  height: var(--navbar-image-width);
+  border-radius: 100px;
+  object-fit: cover;
+}
+
+.profileName {
+  position: relative;
+  color: var(--gray-color);
+  font-weight: 500;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 120px;
+  text-transform: uppercase;
+}
+
+.profileList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+  width: 100%;
+  z-index: 999999;
+  background: var(--white-background);
+  padding: 20px;
+  transform: perspective(800px) rotateX(-90deg) translateY(-15px);
+  transform-origin: top;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.25s ease,
+    visibility 0.4s;
+}
+
+.profileToggleActive {
+  transform: perspective(800px) rotateX(0deg) translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.profileItem {
+  position: relative;
+}
+
+.profileLink {
+  position: relative;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .navBar {
+    margin-left: 0;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .profileName,
+  .profileIcon {
+    display: none;
+  }
+
+  .profileFlex {
+    gap: 5px;
+  }
+
+  .profileList {
+    right: 0;
+    left: auto;
+    min-width: 150px;
+  }
+}
