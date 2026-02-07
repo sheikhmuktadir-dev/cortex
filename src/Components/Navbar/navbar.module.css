@@ -64,7 +64,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 120px;
+  max-width: 120px;
   text-transform: uppercase;
 }
 
